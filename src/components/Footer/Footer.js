@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 class Footer extends Component {
@@ -6,15 +7,13 @@ class Footer extends Component {
   render() { 
     return (
       <footer className="footer">
-        <div className="container bottom_border">
-        </div>
         <div className="container">
-          <p className="text-center">Copyright @2019 | Desarrollado por<br/><a href="#">Habitat para la Humanidad</a> e <a href="#">Instituto Mexicano del Cemento y del Concreto A.C.</a></p>
+          <p className="text-center">@ 2019 | Todos Los Derechos Reservados.<br/><Link to="#">Habitat para la Humanidad México</Link> e <Link to="#">Instituto Mexicano del Cemento y del Concreto A.C.</Link></p>
           <ul className="social_footer_ul">
-            <li><a href="http://webenlance.com"><i className="fa fa-facebook-f"></i></a></li>
-            <li><a href="http://webenlance.com"><i className="fa fa-twitter"></i></a></li>
-            <li><a href="http://webenlance.com"><i className="fa fa-linkedin"></i></a></li>
-            <li><a href="http://webenlance.com"><i className="fa fa-instagram"></i></a></li>
+            <li><Link to="/"><i className="fa fa-facebook-f"></i></Link></li>
+            <li><Link to="/"><i className="fa fa-twitter"></i></Link></li>
+            <li><Link to="/"><i className="fa fa-linkedin"></i></Link></li>
+            <li><Link to="/"><i className="fa fa-instagram"></i></Link></li>
           </ul>
         </div>
       </footer>
