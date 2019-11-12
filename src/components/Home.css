@@ -7,7 +7,7 @@
 }
 
 .App-header {
-  background: #282c34 url('https://imcyc.github.io/autoconstruccion/images/bkg.jpg') center center;
+  /*background: #282c34 url('https://imcyc.github.io/autoconstruccion/images/bkg.jpg') center center;*/
   background-size: cover;
   min-height: 80vh;
   display: flex;
@@ -228,6 +228,7 @@ input[type=text]:placeholder {
 h1{
     color:#333;
     padding-top: 10px;
+    font-size: 1.5em;
 }
 p{
   color:#333;
