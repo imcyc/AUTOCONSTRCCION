@@ -251,7 +251,34 @@ input[type=submit] {
   box-shadow: 0 0 3px #000000;
   font-size: 0.7em;
   margin-top: 10px;
-  padding: 9px 50px;
+  margin: 20px 0;
+  padding: 9px 10px;
+  width: 100%;
+  transition: all 1s;
+}
+
+button.fadeIn.fourth {
+  background: #333333;
+  border-radius: 0;
+  box-shadow: 0 0 3px #000000;
+  font-size: 0.7em;
+  margin-top: 10px;
+  margin: 20px 0;
+  padding: 9px 10px;
+  width: 100%;
+  transition: all 1s;
+  border: 0;
+  text-align: center;
+  color: #fff;
+}
+
+input[type=submit]:hover {
+  background: #6DB33F;
+  color: #000000;
+}
+
+input[type=text] {
+  text-align: left;
 }
 
 .verde {

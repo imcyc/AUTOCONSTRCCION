@@ -6,7 +6,18 @@ class Home extends Component {
     super(props);
     this.state = {  }
   }
-  render() { 
+  renderRegistro(valor) {
+    console.log(valor)
+    if(valor) {
+      return (
+        <input type="text" className="fadeIn second" name="login" placeholder="CORREO ELECTRÓNICO"/>
+      )
+    } else {
+      return ''
+    }
+  }
+  render() {
+    let { registrarse } = this.props;
     return ( 
       <div className="App">
         <header className="App-header">
@@ -19,9 +30,17 @@ class Home extends Component {
                 <form>
                   <input type="text" id="login" className="fadeIn second" name="login" placeholder="USUARIO"/>
                   <input type="text" id="password" className="fadeIn third" name="login" placeholder="CONTRASEÑA"/>
-
-                  <input type="submit" className="fadeIn fourth" value="INGRESAR"/>
-                  <input type="submit" className="fadeIn fourth" value="REGISTRARSE"/>
+                  {this.renderRegistro(this.props.registro)}
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-xs-6 col-md-6 col-lg-6">
+                        <input type="submit" className="fadeIn fourth" value="INGRESAR"/>
+                      </div>
+                      <div className="col-xs-6 col-md-6 col-lg-6">
+                        <button onClick={registrarse} className="fadeIn fourth" >REGISTRARSE</button>
+                      </div>
+                    </div>
+                  </div>
                 </form>
             </div>
           </div>
