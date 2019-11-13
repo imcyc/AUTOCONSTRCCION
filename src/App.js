@@ -13,7 +13,6 @@ function App() {
           <Header />
           <Router basename={process.env.PUBLIC_URL}>
             <Route exact path="/" component={Home} />
-            <Route component={NotFound} />
           </Router>
           <Footer />
         </div>

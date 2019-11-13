@@ -13,7 +13,7 @@ class Home extends Component {
           <div className="wrapper fadeInDown">
             <div id="formContent">
                 <div className="fadeIn first">
-                  <h1><span className="verde">SOLUCIONES</span> DE <span className="verde">AUTOCONSTRUCCIÓN</span></h1>
+                  <h1><span className="azul">SOLUCIONES DE</span><br/><span className="verde">AUTOCONSTRUCCIÓN</span></h1>
                   <p>Manual para la Autoconstrucción y Mejoramiento de la Construcción</p>
                 </div>
                 <form>
