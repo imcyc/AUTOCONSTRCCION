@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import './Home.css';
 
 class Home extends Component {
@@ -17,7 +18,7 @@ class Home extends Component {
     }
   }
   render() {
-    let { registrarse } = this.props;
+    let { registrarse, registro, login } = this.props;
     return ( 
       <div className="App">
         <header className="App-header">
@@ -27,17 +28,18 @@ class Home extends Component {
                   <h1><span className="azul">SOLUCIONES DE</span><br/><span className="verde">AUTOCONSTRUCCIÓN</span></h1>
                   <p>Manual para la Autoconstrucción y Mejoramiento de la Construcción</p>
                 </div>
-                <form>
+                <form onSubmit={login}>
                   <input type="text" id="login" className="fadeIn second" name="login" placeholder="USUARIO"/>
                   <input type="text" id="password" className="fadeIn third" name="login" placeholder="CONTRASEÑA"/>
-                  {this.renderRegistro(this.props.registro)}
+                  {this.renderRegistro(registro)}
                   <div className="container">
                     <div className="row">
                       <div className="col-xs-6 col-md-6 col-lg-6">
-                        <input type="submit" className="fadeIn fourth" value="INGRESAR"/>
+                        <Link to="/panel">pprueba</Link>
+                        <button type="submit" className="fadeIn fourth">INGRESAR <i className="lni-chevron-right"></i> </button>
                       </div>
-                      <div className="col-xs-6 col-md-6 col-lg-6">
-                        <button onClick={registrarse} className="fadeIn fourth" >REGISTRARSE</button>
+                      <div className="col-xs-6 col-md-6 col-lg-6" style={{display: registro ? 'none':'block'}}>
+                        <button onClick={registrarse} className="fadeIn fourth">REGISTRARSE <i className="lni-chevron-right"></i> </button>
                       </div>
                     </div>
                   </div>

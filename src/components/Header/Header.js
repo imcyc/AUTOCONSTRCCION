@@ -8,7 +8,24 @@ import './Header.css';
 
 class Header extends Component {
   state = {  }
+  navUsuario(valor){
+    if(valor){
+
+    } else {
+
+    }
+  }
+  nombreUsuario(valor){
+    if(valor){
+      return (
+        <Navbar.Text>
+          Signed in as: <a href="#login">Mark Otto</a>
+        </Navbar.Text>
+      )
+    }
+  };
   render() { 
+    const { usuario } = this.props;
     return (
       <Navbar expand="lg">
         <Navbar.Brand>
@@ -23,9 +40,7 @@ class Header extends Component {
           </Nav>
         </Navbar.Collapse>
         <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
-          </Navbar.Text>
+          {this.nombreUsuario(usuario)}
         </Navbar.Collapse>
       </Navbar>
     );

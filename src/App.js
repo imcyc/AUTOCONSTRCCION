@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
-import { HashRouter, BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import Home from './components/Home';
+
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import Home from './components/Home';
+import Panel from './components/Panel/Panel';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      registro: false
+      registro: false,
+      usuario: false
     }
   }
   registrarse = (e) => {
@@ -18,25 +21,37 @@ class App extends Component {
       registro: !this.state.registro
     })
   }
+  login = (e) => {
+    e.preventDefault();
+    this.setState({
+      usuario: !this.state.usuario
+    })
+  }
   render() {
     return (
-      <HashRouter basename='/'>
-          <div>
-            <Header />
-            <Router basename={process.env.PUBLIC_URL}>
-              <Route 
-                exact 
-                path="/" 
-                component={(props) => <Home 
-                  {...props} 
-                  registrarse={this.registrarse} 
-                  registro={this.state.registro}
-                />}
-              />
-            </Router>
-            <Footer />
-          </div>
-      </HashRouter>
+      <div>
+        <Header usuario={this.state.usuario} />
+        <Router basename={process.env.PUBLIC_URL}>
+          <Route 
+            exact 
+            path="/" 
+            component={(props) => <Home 
+              {...props} 
+              registrarse={this.registrarse} 
+              registro={this.state.registro}
+              login={this.login}
+            />}
+          />
+          <Route 
+            exact 
+            path="/panel" 
+            component={(props) => <Panel 
+              {...props}
+            />}
+          />
+        </Router>
+        <Footer />
+      </div>
     );
   }
 }
