@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -27,9 +27,8 @@ class App extends Component {
     });
   }
   render() {
-    const { usuario } = this.state;
     return (
-      <BrowserRouter basename='/'>
+      <HashRouter basename='/'>
         <div>
           <Header usuario={this.state.usuario} />
           <Switch>
@@ -54,7 +53,7 @@ class App extends Component {
           </Switch>
           <Footer />
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
