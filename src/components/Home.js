@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import './Home.css';
 
 class Home extends Component {
@@ -8,7 +7,6 @@ class Home extends Component {
     this.state = {  }
   }
   renderRegistro(valor) {
-    console.log(valor)
     if(valor) {
       return (
         <input type="text" className="fadeIn second" name="login" placeholder="CORREO ELECTRÓNICO"/>
@@ -32,7 +30,7 @@ class Home extends Component {
                   <input type="text" id="login" className="fadeIn second" name="login" placeholder="USUARIO"/>
                   <input type="text" id="password" className="fadeIn third" name="login" placeholder="CONTRASEÑA"/>
                   {this.renderRegistro(registro)}
-                  <div className="container">
+                  <div className="container loged">
                     <div className="row">
                       <div className="col-xs-6 col-md-6 col-lg-6">
                         <button type="submit" className="fadeIn fourth">INGRESAR <i className="lni-chevron-right"></i> </button>

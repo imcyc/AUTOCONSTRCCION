@@ -6,7 +6,6 @@ class Login extends Component {
     this.state = {  }
   }
   renderRegistro(valor) {
-    console.log(valor)
     if(valor) {
       return (
         <input type="text" className="fadeIn second" name="login" placeholder="CORREO ELECTRÓNICO"/>

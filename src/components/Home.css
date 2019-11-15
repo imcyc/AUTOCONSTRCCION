@@ -292,3 +292,9 @@ input[type=text] {
 .gris {
   color: #ccc;
 }
+
+.container.loged i {
+  position: absolute;
+  right: 20px;
+  top: 33px;
+}
