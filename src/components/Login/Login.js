@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
-import './Home.css';
 
-class Home extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {  }
@@ -17,7 +15,7 @@ class Home extends Component {
       return ''
     }
   }
-  render() {
+  render() { 
     let { registrarse, registro, login } = this.props;
     return ( 
       <div className="App">
@@ -51,4 +49,4 @@ class Home extends Component {
   }
 }
  
-export default Home;
+export default Login;

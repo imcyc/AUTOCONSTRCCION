@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from "react-router-dom";
 import './App.css';
-
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home';
@@ -25,7 +24,7 @@ class App extends Component {
     e.preventDefault();
     this.setState({
       usuario: !this.state.usuario
-    })
+    });
   }
   render() {
     return (
