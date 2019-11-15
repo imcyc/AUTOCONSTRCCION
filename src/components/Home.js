@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 import './Home.css';
 
 class Home extends Component {
@@ -16,7 +17,12 @@ class Home extends Component {
     }
   }
   render() {
-    let { registrarse, registro, login } = this.props;
+    let { registrarse, registro, login, usuario } = this.props;
+    if(usuario){
+      return (
+        <Redirect to="/panel" />
+      );
+    }
     return ( 
       <div className="App">
         <header className="App-header">

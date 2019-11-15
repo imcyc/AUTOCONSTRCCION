@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -23,16 +23,11 @@ class App extends Component {
   login = (e) => {
     e.preventDefault();
     this.setState({
-      usuario: !this.state.usuario
+      usuario: true
     });
   }
   render() {
     const { usuario } = this.state;
-    if(usuario){
-      return (
-       <Redirect to="/panel" />
-      );
-    }
     return (
       <BrowserRouter basename='/'>
         <div>
@@ -46,6 +41,7 @@ class App extends Component {
                 registrarse={this.registrarse} 
                 registro={this.state.registro}
                 login={this.login}
+                usuario={this.state.usuario}
               />}
             />
             <Route 

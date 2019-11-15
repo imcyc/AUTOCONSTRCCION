@@ -8,19 +8,26 @@ import './Header.css';
 
 class Header extends Component {
   state = {  }
-  navUsuario(valor){
+  menuUsuario(valor){
     if(valor){
-
-    } else {
-
+      return (
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/">Link</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      )
     }
   }
   nombreUsuario(valor){
     if(valor){
       return (
-        <Navbar.Text>
-          Signed in as: <a href="#login">Mark Otto</a>
-        </Navbar.Text>
+        <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text>
+            Signed in as: <a href="#login">Mark Otto</a>
+          </Navbar.Text>
+        </Navbar.Collapse>
       )
     }
   };
@@ -33,15 +40,8 @@ class Header extends Component {
           <img src={logoHabitat} alt="Manual de autoconstrucción" title="Manual de autoconstrucción" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/">Link</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-        <Navbar.Collapse className="justify-content-end">
-          {this.nombreUsuario(usuario)}
-        </Navbar.Collapse>
+        {this.menuUsuario(usuario)}
+        {this.nombreUsuario(usuario)}
       </Navbar>
     );
   }
