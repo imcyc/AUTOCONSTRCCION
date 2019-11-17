@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
+import SideMenu from './SideMenu';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -10,13 +11,10 @@ class Panel extends Component {
   }
   render() { 
     return (
-      <Container fluid={true} style={{height: '80vh'}}>
+      <Container fluid={true}>
         <Row style={{height: '100%'}}>
-          <Col xs={12} md={1} style={{background: '#dedede',height: '100%'}}>
-            
-          </Col>
-          <Col xs={12} md={11}>
-            
+          <Col xs={12} md={12}>
+            <SideMenu />
           </Col>
         </Row>
       </Container>
