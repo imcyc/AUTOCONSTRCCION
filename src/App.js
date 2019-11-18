@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       registro: false,
-      usuario: false
+      usuario: localStorage.getItem('usuario')
     }
   }
   registrarse = (e) => {
@@ -23,9 +23,13 @@ class App extends Component {
   }
   login = (e) => {
     e.preventDefault();
+    localStorage.setItem('usuario', JSON.stringify(true));
+    localStorage.setItem('registro', JSON.stringify(true));
+    /*
     this.setState({
       usuario: true
     });
+    */
   }
   render() {
     return (
