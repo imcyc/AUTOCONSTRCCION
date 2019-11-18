@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 
 import './SideMenu.css';
@@ -15,15 +16,15 @@ const SideMenu = () => {
     <SideNav.Nav defaultSelected="home">
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-arrow-right-circle" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
-                INTRODUCCIÓN
+                <Link to="/introduccion">INTRODUCCIÓN</Link>
             </NavText>
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-home" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 TUTORIAL
@@ -31,7 +32,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-microscope" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 PROCESO INTEGRAL
@@ -40,7 +41,7 @@ const SideMenu = () => {
         <hr/>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-write" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 PROCEDIMIENTOS
@@ -48,7 +49,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-microsoft" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 CÁPSULAS
@@ -56,7 +57,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-bulb" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 INSTALACIONES Y ACABADOS
@@ -65,7 +66,7 @@ const SideMenu = () => {
         <hr/>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-paperclip" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 EXAMEN DE CERTIFICACIÓN
@@ -73,7 +74,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-calculator" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 CALCULADORA DE CONCRETO
@@ -81,7 +82,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-agenda" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 MORTERO DOSIFICACIÓN
@@ -89,7 +90,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="fa fa-fw fa-home" style={{ fontSize: '1.75em' }} />
+                <i class="lni-list" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 GLOSARIO
