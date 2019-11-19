@@ -23,13 +23,21 @@ class App extends Component {
   }
   login = (e) => {
     e.preventDefault();
+
+    /*
     localStorage.setItem('usuario', JSON.stringify(true));
     localStorage.setItem('registro', JSON.stringify(true));
-    /*
+    
     this.setState({
       usuario: true
     });
     */
+  }
+  loginU = (e) => {
+    e.preventDefault();
+    this.setState({
+      registro: !this.state.registro
+    })
   }
   render() {
     return (
@@ -45,6 +53,7 @@ class App extends Component {
                 registrarse={this.registrarse} 
                 registro={this.state.registro}
                 login={this.login}
+                loginU={this.loginU}
                 usuario={this.state.usuario}
               />}
             />

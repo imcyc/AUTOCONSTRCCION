@@ -25,7 +25,7 @@ class Header extends Component {
       return (
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            Signed in as: <a href="#login">Mark Otto</a>
+            <a href="#login">Sergio Prieto</a>
           </Navbar.Text>
         </Navbar.Collapse>
       )

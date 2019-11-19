@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import './Home.css';
 
 class Home extends Component {
@@ -17,7 +17,7 @@ class Home extends Component {
     }
   }
   render() {
-    let { registrarse, registro, login, usuario } = this.props;
+    let { registrarse, registro, login, loginU, usuario } = this.props;
     if(usuario){
       return (
         <Redirect to="/panel" />
@@ -38,8 +38,14 @@ class Home extends Component {
                   {this.renderRegistro(registro)}
                   <div className="container loged">
                     <div className="row">
-                      <div className="col-xs-6 col-md-6 col-lg-6">
-                        <button type="submit" className="fadeIn fourth">INGRESAR <i className="lni-chevron-right"></i> </button>
+                      <div className={registro ? 'col-xs-12 col-md-12 col-lg-12' : 'col-xs-6 col-md-6 col-lg-6'}>
+                        <button 
+                          type="submit" 
+                          className="fadeIn fourth">
+                            {registro ? 'REGISTRARSE E INGRESAR' : 'INGRESAR'}
+                            <i className="lni-chevron-right"></i> 
+                        </button>
+                        {registro ? <Link onClick={loginU} style={{fontSize: '15px'}}>Ya tiene una cuenta?, Ingrese dando click aquí</Link> : ''}
                       </div>
                       <div className="col-xs-6 col-md-6 col-lg-6" style={{display: registro ? 'none':'block'}}>
                         <button onClick={registrarse} className="fadeIn fourth">REGISTRARSE <i className="lni-chevron-right"></i> </button>
