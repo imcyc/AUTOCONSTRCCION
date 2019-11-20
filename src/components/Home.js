@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from "react-router-dom";
 import axios from 'axios';
+import Carousel from './Carousel/Carousel';
 import './Home.css';
 
 class Home extends Component {
@@ -25,6 +26,13 @@ class Home extends Component {
       return ''
     }
   }
+  tituloRegistro(valor){
+    if(valor){
+      return(
+        <h3 style={{color: '#6db33f'}}><b>REGÍSTRESE DE MANERA GRATUITA</b></h3>
+      )
+    }
+  }
   render() {
     let { registrarse, registro, login, loginU, usuario } = this.props;
     if(usuario){
@@ -34,12 +42,14 @@ class Home extends Component {
     }
     return ( 
       <div className="App">
+        <Carousel />
         <header className="App-header">
-          <div className="wrapper fadeInDown">
+          <div className="wrapper fadeInDown" style={{zIndex: '10'}}>
             <div id="formContent">
                 <div className="fadeIn first">
                   <h1><span className="azul">SOLUCIONES DE</span><br/><span className="verde">AUTOCONSTRUCCIÓN</span></h1>
                   <p>Manual para la Autoconstrucción y Mejoramiento de la Construcción</p>
+                  {this.tituloRegistro(registro)}
                 </div>
                 <form onSubmit={login}>
                   <input type="email" id="login" className="fadeIn second" name="email" placeholder="CORREO ELECTRÓNICO"/>

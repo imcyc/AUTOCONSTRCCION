@@ -7,7 +7,6 @@
 }
 
 .App-header {
-  background: #282c34 url('https://imcyc.github.io/autoconstruccion/images/bkg.jpg') center center;
   background-size: cover;
   min-height: 80vh;
   display: flex;

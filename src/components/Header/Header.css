@@ -1,5 +1,6 @@
 .navbar {
   border-bottom: 1px solid #ccc;
+  background: rgba(255,255,255,0.95);
 }
 .navbar-brand img {
   width: 150px;
