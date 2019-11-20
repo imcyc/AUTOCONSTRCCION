@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 import axios from 'axios';
 import Header from './components/Header/Header';
@@ -66,13 +66,12 @@ class App extends Component {
   }
   render() {
     return (
-      <HashRouter basename='/'>
         <div>
           <Header 
             usuario={this.state.usuario} 
             nombre={this.state.datosUsuario.nombre} 
           />
-          <Switch>
+          <Router basename={process.env.PUBLIC_URL}>
             <Route 
               exact 
               path="/" 
@@ -101,10 +100,9 @@ class App extends Component {
                 {...props}
               />}
             />
-          </Switch>
+          </Router>
           <Footer />
         </div>
-      </HashRouter>
     );
   }
 }
