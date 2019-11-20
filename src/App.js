@@ -43,7 +43,8 @@ class App extends Component {
     }
     axios.post(`https://18.219.47.222/apis/autoconstruccion/usuario.php`, { usuario })
       .then(res => {
-        console.log(res.data);
+        console.log('el nombre supuesto: ' + res.data.nombre);
+        
         if(res.data.usuario === 'usuario'){
           this.setState({
             usuario: true,
@@ -52,8 +53,9 @@ class App extends Component {
               email: res.data.email
             }
           });
-          console.log('elusuario ' + this.state.datosUsuario.email);
+          console.log('elusuario ' + this.state.datosUsuario.nombre);
         }
+        
       })
   }
   loginU = (e) => {
@@ -66,7 +68,10 @@ class App extends Component {
     return (
       <HashRouter basename='/'>
         <div>
-          <Header usuario={this.state.usuario} datosUsuario={this.state.datosUsuario} />
+          <Header 
+            usuario={this.state.usuario} 
+            nombre={this.state.datosUsuario.nombre} 
+          />
           <Switch>
             <Route 
               exact 

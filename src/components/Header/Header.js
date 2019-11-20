@@ -28,14 +28,14 @@ class Header extends Component {
       return (
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <a href="#login">{this.props.datosUsuario.nombre}</a>
+            <a href="#login">{valor}</a>
           </Navbar.Text>
         </Navbar.Collapse>
       )
     }
   };
   render() { 
-    const { usuario } = this.props;
+    const { usuario, nombre } = this.props;
     return (
       <Navbar expand="lg">
         <Navbar.Brand>
@@ -44,7 +44,7 @@ class Header extends Component {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         {this.menuUsuario(usuario)}
-        {this.nombreUsuario(usuario)}
+        {this.nombreUsuario(nombre)}
       </Navbar>
     );
   }
