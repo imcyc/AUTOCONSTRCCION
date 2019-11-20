@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import './App.css';
 import axios from 'axios';
 import Header from './components/Header/Header';
@@ -43,8 +43,7 @@ class App extends Component {
     }
     axios.post(`https://18.219.47.222/apis/autoconstruccion/usuario.php`, { usuario })
       .then(res => {
-        console.log('el nombre supuesto: ' + res.data.nombre);
-        
+        console.log('el nombre supuesto: ' + res.data.usuario);
         if(res.data.usuario === 'usuario'){
           this.setState({
             usuario: true,
@@ -55,7 +54,6 @@ class App extends Component {
           });
           console.log('elusuario ' + this.state.datosUsuario.nombre);
         }
-        
       })
   }
   loginU = (e) => {
@@ -66,12 +64,13 @@ class App extends Component {
   }
   render() {
     return (
+      <HashRouter basename='/'>
         <div>
           <Header 
             usuario={this.state.usuario} 
             nombre={this.state.datosUsuario.nombre} 
           />
-          <Router basename={process.env.PUBLIC_URL}>
+          <Switch>
             <Route 
               exact 
               path="/" 
@@ -100,9 +99,10 @@ class App extends Component {
                 {...props}
               />}
             />
-          </Router>
+          </Switch>
           <Footer />
         </div>
+      </HashRouter>
     );
   }
 }
