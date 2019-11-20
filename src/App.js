@@ -12,36 +12,27 @@ class App extends Component {
     super(props);
     this.state = {
       registro: false
-      //usuario: localStorage.getItem('usuario')
     }
   }
   registrarse = (e) => {
     e.preventDefault();
-    /*
     this.setState({
       registro: !this.state.registro
     })
-    */
+    
   }
   login = (e) => {
     e.preventDefault();
-
-    /*
-    localStorage.setItem('usuario', JSON.stringify(true));
-    localStorage.setItem('registro', JSON.stringify(true));
+    let email = e.target.email.value;
+    let pw = e.target.password.value;
+    console.log(email + ' + ' + pw);
     
-    this.setState({
-      usuario: true
-    });
-    */
   }
   loginU = (e) => {
     e.preventDefault();
-    /*
     this.setState({
       registro: !this.state.registro
     })
-    */
   }
   render() {
     return (

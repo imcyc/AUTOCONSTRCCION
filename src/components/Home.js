@@ -19,7 +19,7 @@ class Home extends Component {
   renderRegistro(valor) {
     if(valor) {
       return (
-        <input type="text" className="fadeIn second" name="login" placeholder="CORREO ELECTRÓNICO"/>
+        <input type="email" className="fadeIn second" name="email2" placeholder="CORREO ELECTRÓNICO"/>
       )
     } else {
       return ''
@@ -42,8 +42,8 @@ class Home extends Component {
                   <p>Manual para la Autoconstrucción y Mejoramiento de la Construcción</p>
                 </div>
                 <form onSubmit={login}>
-                  <input type="text" id="login" className="fadeIn second" name="login" placeholder="USUARIO"/>
-                  <input type="text" id="password" className="fadeIn third" name="login" placeholder="CONTRASEÑA"/>
+                  <input type="email" id="login" className="fadeIn second" name="email" placeholder="CORREO ELECTRÓNICO"/>
+                  <input type="text" id="password" className="fadeIn third" name="password" placeholder="CONTRASEÑA"/>
                   {this.renderRegistro(registro)}
                   <div className="container loged">
                     <div className="row">
