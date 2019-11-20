@@ -16,7 +16,7 @@ const SideMenu = () => {
     <SideNav.Nav defaultSelected="home">
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-arrow-right-circle" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-arrow-right-circle" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 <Link to="/introduccion">INTRODUCCIÓN</Link>
@@ -24,7 +24,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-home" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-home" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 TUTORIAL
@@ -32,7 +32,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-microscope" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-microscope" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 PROCESO INTEGRAL
@@ -41,7 +41,7 @@ const SideMenu = () => {
         <hr/>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-write" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-write" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 PROCEDIMIENTOS
@@ -49,7 +49,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-microsoft" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-microsoft" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 CÁPSULAS
@@ -57,7 +57,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-bulb" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-bulb" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 INSTALACIONES Y ACABADOS
@@ -66,7 +66,7 @@ const SideMenu = () => {
         <hr/>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-paperclip" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-paperclip" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 EXAMEN DE CERTIFICACIÓN
@@ -74,7 +74,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-calculator" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-calculator" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 CALCULADORA DE CONCRETO
@@ -82,7 +82,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-agenda" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-agenda" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 MORTERO DOSIFICACIÓN
@@ -90,7 +90,7 @@ const SideMenu = () => {
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i class="lni-list" style={{ fontSize: '1.75em' }}></i>
+                <i className="lni-list" style={{ fontSize: '1.75em' }}></i>
             </NavIcon>
             <NavText>
                 GLOSARIO

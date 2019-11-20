@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from "react-router-dom";
-import axios from 'axios';
+
 import Carousel from './Carousel/Carousel';
 import './Home.css';
 
@@ -8,14 +8,6 @@ class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {  }
-  }
-  componentDidMount() {
-    axios.get(`https://18.219.47.222/apis/autoconstruccion/usuarios.php`)
-      .then(res => {
-        const candidatos = res.data;
-        console.log(candidatos);
-        //this.setState({ candidatos });
-      })
   }
   renderRegistro(valor) {
     if(valor) {
@@ -53,7 +45,7 @@ class Home extends Component {
                 </div>
                 <form onSubmit={login}>
                   <input type="email" id="login" className="fadeIn second" name="email" placeholder="CORREO ELECTRÓNICO"/>
-                  <input type="text" id="password" className="fadeIn third" name="password" placeholder="CONTRASEÑA"/>
+                  <input type="password" id="password" className="fadeIn third" name="password" placeholder="CONTRASEÑA"/>
                   {this.renderRegistro(registro)}
                   <div className="container loged">
                     <div className="row">

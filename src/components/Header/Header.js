@@ -7,7 +7,10 @@ import logoHabitat from '../../images/logo-habitat.png';
 import './Header.css';
 
 class Header extends Component {
-  state = {  }
+  constructor(props) {
+    super(props);
+    this.state = {}
+  }
   menuUsuario(valor){
     if(valor){
       return (
@@ -25,7 +28,7 @@ class Header extends Component {
       return (
         <Navbar.Collapse className="justify-content-end">
           <Navbar.Text>
-            <a href="#login">Sergio Prieto</a>
+            <a href="#login">{this.props.datosUsuario.nombre}</a>
           </Navbar.Text>
         </Navbar.Collapse>
       )
