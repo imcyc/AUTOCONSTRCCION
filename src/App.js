@@ -11,15 +11,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      registro: false,
-      usuario: localStorage.getItem('usuario')
+      registro: false
+      //usuario: localStorage.getItem('usuario')
     }
   }
   registrarse = (e) => {
     e.preventDefault();
+    /*
     this.setState({
       registro: !this.state.registro
     })
+    */
   }
   login = (e) => {
     e.preventDefault();
@@ -35,9 +37,11 @@ class App extends Component {
   }
   loginU = (e) => {
     e.preventDefault();
+    /*
     this.setState({
       registro: !this.state.registro
     })
+    */
   }
   render() {
     return (

@@ -9,7 +9,7 @@ class Home extends Component {
     this.state = {  }
   }
   componentDidMount() {
-    axios.get(`https://18.219.47.222/apis/bolsadetrabajo/candidatos.php`)
+    axios.get(`https://18.219.47.222/apis/autoconstruccion/usuarios.php`)
       .then(res => {
         const candidatos = res.data;
         console.log(candidatos);
