@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
 import { Redirect, Link } from "react-router-dom";
+import axios from 'axios';
 import './Home.css';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {  }
+  }
+  componentDidMount() {
+    axios.get(`https://18.219.47.222/apis/bolsadetrabajo/candidatos.php`)
+      .then(res => {
+        const candidatos = res.data;
+        console.log(candidatos);
+        //this.setState({ candidatos });
+      })
   }
   renderRegistro(valor) {
     if(valor) {
