@@ -296,6 +296,10 @@ input[type=text] {
   color: #ccc;
 }
 
+.rojo {
+  color: #971319;
+}
+
 .container.loged i {
   position: absolute;
   right: 20px;

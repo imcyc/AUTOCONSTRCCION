@@ -14,6 +14,7 @@ class App extends Component {
     this.state = {
       registro: false,
       usuario: false,
+      mensajeLog: '',
       datosUsuario: {
         nombre: '',
         email: ''
@@ -31,29 +32,41 @@ class App extends Component {
   registrarse = (e) => {
     e.preventDefault();
     this.setState({
-      registro: !this.state.registro
+      registro: !this.state.registro,
+      mensajeLog: ''
     })
     
   }
   login = (e) => {
     e.preventDefault();
+    console.log('logueando');
     const usuario = {
       email: e.target.email.value,
       pw: e.target.password.value
     }
     axios.post(`https://18.219.47.222/apis/autoconstruccion/usuario.php`, { usuario })
       .then(res => {
-        console.log('el nombre supuesto: ' + res.data.usuario);
         if(res.data.usuario === 'usuario'){
+          console.log('yea');
           this.setState({
             usuario: true,
+            mensajeLog: '',
             datosUsuario: {
               nombre: res.data.nombre,
               email: res.data.email
             }
           });
-          console.log('elusuario ' + this.state.datosUsuario.nombre);
+        } else if(res.data === 'nousuario'){
+          console.log('NOyea');
+          this.setState({
+            usuario: false,
+            mensajeLog: 'Datos de usuario incorrectos!'
+          });
         }
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
       })
   }
   loginU = (e) => {
@@ -67,7 +80,7 @@ class App extends Component {
       <HashRouter basename='/'>
         <div>
           <Header 
-            usuario={this.state.usuario} 
+            usuario={this.state.usuario}
             nombre={this.state.datosUsuario.nombre} 
           />
           <Switch>
@@ -81,7 +94,7 @@ class App extends Component {
                 login={this.login}
                 loginU={this.loginU}
                 usuario={this.state.usuario}
-                
+                mensajeLog={this.state.mensajeLog}
               />}
             />
             <Route 

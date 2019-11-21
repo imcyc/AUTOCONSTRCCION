@@ -9,31 +9,7 @@ import './Header.css';
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.state = {}
   }
-  menuUsuario(valor){
-    if(valor){
-      return (
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/">Link</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      )
-    }
-  }
-  nombreUsuario(valor){
-    if(valor){
-      return (
-        <Navbar.Collapse className="justify-content-end">
-          <Navbar.Text>
-            <a href="#login">{valor}</a>
-          </Navbar.Text>
-        </Navbar.Collapse>
-      )
-    }
-  };
   render() { 
     const { usuario, nombre } = this.props;
     return (
@@ -43,8 +19,21 @@ class Header extends Component {
           <img src={logoHabitat} alt="Manual de autoconstrucción" title="Manual de autoconstrucción" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        {this.menuUsuario(usuario)}
-        {this.nombreUsuario(nombre)}
+        {nombre && (
+          <div>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="mr-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/">Link</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+            <Navbar.Collapse className="justify-content-end">
+              <Navbar.Text>
+                <a href="#login">{nombre}</a>
+              </Navbar.Text>
+            </Navbar.Collapse>
+          </div>
+        )}
       </Navbar>
     );
   }
