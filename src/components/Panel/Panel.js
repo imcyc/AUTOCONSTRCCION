@@ -4,6 +4,7 @@ import SideMenu from './SideMenu';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ItemCarousel from '../ItemCarousel/ItemCarousel';
+import { Player } from 'video-react';
 
 import './Panel.css';
 
@@ -19,6 +20,11 @@ class Panel extends Component {
           <Col xs={12} md={12}>
             <SideMenu />
             <div className="contenido">
+              <Player
+                playsInline
+                poster="/assets/poster.png"
+                src="https://18.218.198.31/videos/introduccion.mp4"
+              />
               <h1><i class="lni-chevron-right"></i> PROCEDIMIENTOS</h1>
               <hr/>
               <ItemCarousel />

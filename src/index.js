@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
+import "video-react/dist/video-react.css";
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
