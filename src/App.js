@@ -15,8 +15,8 @@ class App extends Component {
       usuario: false,
       mensajeLog: '',
       datosUsuario: {
-        nombre: '',
-        email: ''
+        nombre: localStorage.getItem('nombre') || '',
+        email: localStorage.getItem('email') || ''
       }
     }
   }
@@ -38,7 +38,6 @@ class App extends Component {
   }
   login = (e) => {
     e.preventDefault();
-    console.log('logueando');
     const usuario = {
       email: e.target.email.value,
       pw: e.target.password.value
@@ -50,11 +49,9 @@ class App extends Component {
           this.setState({
             usuario: true,
             mensajeLog: '',
-            datosUsuario: {
-              nombre: res.data.nombre,
-              email: res.data.email
-            }
           });
+          localStorage.setItem('nombre', res.data.nombre);
+          localStorage.setItem('email', res.data.email);
         } else if(res.data === 'nousuario'){
           console.log('NOyea');
           this.setState({
@@ -79,8 +76,7 @@ class App extends Component {
       <HashRouter basename={process.env.PUBLIC_URL}>
         <div>
           <Header 
-            usuario={this.state.usuario}
-            nombre={this.state.datosUsuario.nombre} 
+            datosUsuario={this.state.datosUsuario}
           />
           <Switch>
             <Route 
@@ -94,6 +90,7 @@ class App extends Component {
                 loginU={this.loginU}
                 usuario={this.state.usuario}
                 mensajeLog={this.state.mensajeLog}
+                datosUsuario={this.state.datosUsuario}
               />}
             />
             <Route 

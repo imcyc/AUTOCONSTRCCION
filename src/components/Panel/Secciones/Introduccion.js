@@ -4,7 +4,7 @@ import { Player, LoadingSpinner, BigPlayButton } from 'video-react';
 const Introduccion = () => {
   return (
     <div>
-      <h1><i className="lni-chevron-right"></i> INTRODUCCION</h1>
+      <h1><i className="lni-chevron-right"></i> INTRODUCCIÓN</h1>
       <hr/>
       <Player
         src="https://18.218.198.31/videos/introduccion.mp4"
