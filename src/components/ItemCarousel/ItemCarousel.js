@@ -26,8 +26,8 @@ class ItemCarousel extends Component {
           firstAndLastGutter={false}
           activeItemIndex={this.state.activeItemIndex}
           requestToChangeActive={value => this.setState({ activeItemIndex: value })}
-          rightChevron={<i class="lni-angle-double-right"></i>}
-          leftChevron={<i class="lni-angle-double-left"></i>}
+          rightChevron={<i className="lni-angle-double-right"></i>}
+          leftChevron={<i className="lni-angle-double-left"></i>}
         >
           {Array.from(new Array(10)).map((_, i) =>
             <div

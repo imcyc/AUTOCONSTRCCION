@@ -8,7 +8,7 @@ import logoHabitat from '../../images/logo-habitat.png';
 import './Header.css';
 
 const Header = (props) => {
-    const { nombre } = props;
+    const { usuario, nombre } = props;
     return (
       <Navbar expand="lg">
         <Navbar.Brand>
@@ -16,7 +16,7 @@ const Header = (props) => {
           <img src={logoHabitat} alt="Manual de autoconstrucción" title="Manual de autoconstrucción" />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        {nombre && (
+        {usuario && (
           <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end buscador">
             <Form inline>
               <FormControl type="text" placeholder="BUSCAR CONTENIDOS" className="mr-sm-2" />

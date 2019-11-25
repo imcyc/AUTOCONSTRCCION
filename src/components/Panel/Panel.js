@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+import { Route, Switch } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
+import Introduccion from './Secciones/Introduccion';
+import Tutorial from './Secciones/Tutorial';
+import Proceso from './Secciones/Proceso';
 import SideMenu from './SideMenu';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import ItemCarousel from '../ItemCarousel/ItemCarousel';
-import { Player } from 'video-react';
 
 import './Panel.css';
 
@@ -20,20 +22,29 @@ class Panel extends Component {
           <Col xs={12} md={12}>
             <SideMenu />
             <div className="contenido">
-              <Player
-                playsInline
-                poster="/assets/poster.png"
-                src="https://18.218.198.31/videos/introduccion.mp4"
-              />
-              <h1><i class="lni-chevron-right"></i> PROCEDIMIENTOS</h1>
-              <hr/>
-              <ItemCarousel />
-              <h1><i class="lni-chevron-right"></i> CÁPSULAS</h1>
-              <hr/>
-              <ItemCarousel />
-              <h1><i class="lni-chevron-right"></i> INSTALACIONES Y ACABADOS</h1>
-              <hr/>
-              <ItemCarousel />
+              <Switch>
+                <Route 
+                  exact 
+                  path="/panel/introduccion" 
+                  component={(props) => <Introduccion 
+                    {...props} 
+                  />}
+                />
+                <Route 
+                  exact 
+                  path="/panel/tutorial" 
+                  component={(props) => <Tutorial 
+                    {...props} 
+                  />}
+                />
+                <Route 
+                  exact 
+                  path="/panel/proceso" 
+                  component={(props) => <Proceso 
+                    {...props} 
+                  />}
+                />
+              </Switch>
             </div>
           </Col>
         </Row>

@@ -6,7 +6,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home';
 import Panel from './components/Panel/Panel';
-import Introduccion from './components/Contenidos/Introduccion';
 
 class App extends Component {
   constructor(props) {
@@ -99,17 +98,10 @@ class App extends Component {
             />
             <Route 
               exact 
-              path="/panel" 
+              path={`/panel/:seccion`} 
               component={(props) => <Panel 
                 {...props}
                 datosUsuario={this.state.datosUsuario}
-              />}
-            />
-            <Route 
-              exact 
-              path="/introduccion" 
-              component={(props) => <Introduccion 
-                {...props}
               />}
             />
           </Switch>

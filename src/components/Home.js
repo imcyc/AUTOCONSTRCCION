@@ -28,7 +28,7 @@ class Home extends Component {
     let { registrarse, registro, login, loginU, usuario, mensajeLog } = this.props;
     if(usuario){
       return (
-        <Redirect to="/panel" />
+        <Redirect to="/panel/introduccion" />
       );
     }
     return ( 

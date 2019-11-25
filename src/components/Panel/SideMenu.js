@@ -16,26 +16,32 @@ const SideMenu = () => {
     <SideNav.Nav defaultSelected="home">
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="lni-arrow-right-circle" style={{ fontSize: '1.75em' }}></i>
+                <Link to="/panel/introduccion">
+                    <i className="lni-arrow-right-circle" style={{ fontSize: '1.75em' }}></i>
+                </Link>
             </NavIcon>
             <NavText>
-                <Link to="/introduccion">INTRODUCCIÓN</Link>
+                <Link to="/panel/introduccion">INTRODUCCIÓN</Link>
             </NavText>
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="lni-home" style={{ fontSize: '1.75em' }}></i>
+                <Link to="/panel/tutorial">
+                    <i className="lni-home" style={{ fontSize: '1.75em' }}></i>
+                </Link>
             </NavIcon>
             <NavText>
-                TUTORIAL
+                <Link to="/panel/tutorial">TUTORIAL</Link>
             </NavText>
         </NavItem>
         <NavItem eventKey="home">
             <NavIcon>
-                <i className="lni-microscope" style={{ fontSize: '1.75em' }}></i>
+                <Link to="/panel/proceso">
+                    <i className="lni-microscope" style={{ fontSize: '1.75em' }}></i>
+                </Link>
             </NavIcon>
             <NavText>
-                PROCESO INTEGRAL
+                <Link to="/panel/proceso">PROCESO INTEGRAL</Link>
             </NavText>
         </NavItem>
         <hr/>
