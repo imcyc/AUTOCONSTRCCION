@@ -1,5 +1,5 @@
 import React from 'react';
-import { Player } from 'video-react';
+import { Player, LoadingSpinner, BigPlayButton } from 'video-react';
 
 const Tutorial = () => {
   return (
@@ -10,7 +10,11 @@ const Tutorial = () => {
         playsInline
         poster="/assets/poster.png"
         src="https://18.218.198.31/videos/tutorial.mp4"
-      />
+        autoPlay={true}
+      >
+        <BigPlayButton position="center" />
+        <LoadingSpinner />
+      </Player>
     </div>
   );
 }

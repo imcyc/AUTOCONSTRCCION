@@ -18,7 +18,7 @@ class Panel extends Component {
   render() { 
     return (
       <Container fluid={true}>
-        <Row style={{height: '100vh'}}>
+        <Row>
           <Col xs={12} md={12}>
             <SideMenu />
             <div className="contenido">
